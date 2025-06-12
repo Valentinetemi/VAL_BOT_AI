@@ -22,6 +22,6 @@ env/
 # macOS system files
 .DS_Store
 
-#safe
+#Secret keys and tokens
 openai.env
 
