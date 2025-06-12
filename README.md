@@ -26,3 +26,12 @@ VAL_BOT_AI is an intelligent chatbot powered by the GroqCloud API. It offers a v
    ```bash
    git clone https://github.com/Valentinetemi/VAL_BOT_AI.git
    cd VAL_BOT_AI
+2. Go into the project folder:
+   cd VAL_BOT_AI.git
+
+3. Create and activate a virtual environment:
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+
+4. Install dependencies:
+   pip install -r requirements.txt
