@@ -11,30 +11,27 @@ from flask_cors import CORS
 import string
 from pathlib import Path
 import requests
-import openai
 
 
+load_dotenv(Path(__file__).parent / "openai.env")
 # Initialize Flask and logging
 app = Flask(__name__)
-load_dotenv("C:/Users/HP/OneDrive/Desktop/VAL_BOT_AI/openai.env")
+
 app.secret_key = os.getenv("SECRET_KEY")
 
 logging.basicConfig(level=logging.INFO)
 CORS(app)
 
 # Load environment variables
-load_dotenv(dotenv_path="C:/Users/HP/OneDrive/Desktop/VAL_BOT_AI/openai.env")
+
 WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
 
-load_dotenv("C:/Users/HP/OneDrive/Desktop/VAL_BOT_AI/openai.env")
 key = os.getenv("GROQCLOUD_API_KEY")
 
 res = requests.get(
     "https://api.groq.com/openai/v1/chat/completions",
     headers={"Authorization": f"Bearer {key}"}
 )
-#print(res.status_code, res.json())
-
 
 # Helper functions
 def get_time():
@@ -163,7 +160,7 @@ def chat():
     reply = generate_valbot_reply(user_input_cleaned)
     
     if not reply:
-        reply = generate_valbot_reply(user_input_cleaned)
+        reply = "Hmm...I didn't get that. Try asking another way😊."
         
         #format sentence on a newline
         sentences = re.split(r'(?<=[.!?]) +', reply.strip())
@@ -317,7 +314,7 @@ def chat():
 def home():
     return render_template('index.html')
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+#if __name__ == '__main__':
+    #port = int(os.environ.get('PORT', 5000))
+    #app.run(debug=True, host='0.0.0.0', port=port)
     
