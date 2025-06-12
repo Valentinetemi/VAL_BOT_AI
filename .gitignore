@@ -21,3 +21,7 @@ env/
 
 # macOS system files
 .DS_Store
+
+#safe
+openai.env
+
