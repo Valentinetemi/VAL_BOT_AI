@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Val Bot</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" type="image/png">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-section">
+            <h1>Val Bot</h1>
+            <p>Your friendly AI assistant 🤖</p>
+        </div>
+        <button id="mode-toggle">🌙</button>
+    </header>
+
+    <main id="chat-area">
+    <!-- Initial Bot Message -->
+    <div class="message-container">
+        <div class="bot-message">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Bot" class="icon">
+            <div class="message-content">
+                <div class="bot-text">Hello, I'm Val Bot. How can I assist you today? 😊 </div>
+            </div>
+        </div>
+        <!-- Quick replies for initial message -->
+        <div class="quick-replies initial-quick-replies">
+            <button onclick="quickReply('who created you')" class="quick-reply-btn">Who created You?</button>
+            <button onclick="quickReply('What\'s the weather?')" class="quick-reply-btn">What's the weather?</button>
+            <button onclick="quickReply('Current Time?')" class="quick-reply-btn">Current Time?</button>
+        </div>
+    </div>
+</main>
+
+
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required>
+        <button type="submit" id="send-button">➤</button>
+    </form>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
