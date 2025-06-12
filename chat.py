@@ -11,6 +11,7 @@ from flask_cors import CORS
 import string
 from pathlib import Path
 import requests
+import pytz
 
 
 load_dotenv(Path(__file__).parent / "openai.env")
@@ -35,7 +36,9 @@ res = requests.get(
 
 # Helper functions
 def get_time():
-    return datetime.datetime.now().strftime("%I:%M:%S %p") # to get the time
+    nigeria_tz = pytz.timezone('Africa/Lagos')
+    now = datetime.datetime.now(nigeria_tz)
+    return now.strftime("%I:%M:%S %p") # to get the time
 
 def get_date():
     return datetime.datetime.now().strftime("%Y-%m-%d") # to get the date
