@@ -5,7 +5,6 @@ VAL_BOT_AI is an intelligent chatbot powered by the GroqCloud API. It offers a v
 ## Features
 
 - Real-time weather information
-- Basic math problem solving
 - Casual and contextual conversations
 - Language translation support
 - Date and time queries
