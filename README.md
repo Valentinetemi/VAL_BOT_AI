@@ -17,6 +17,12 @@ It offers a range of helpful features including real-time weather updates, langu
 
 ---
 
+## 📺 Demo
+
+[![Watch the demo](https://img.youtube.com/vi/P0LaTboOQyE/hqdefault.jpg)](https://www.youtube.com/watch?v=P0LaTboOQyE)
+
+---
+
 ## 🚀 Getting Started
 
 ### ✅ Prerequisites
